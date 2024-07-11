@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3qctnlj2onmc"]
+
+[ext_resource type="Script" path="res://Otto/Otto.gd" id="1_iljk6"]
+[ext_resource type="Texture2D" uid="uid://c0wcitxk4vu5b" path="res://Otto/feet.png" id="2_yk0st"]
+[ext_resource type="Texture2D" uid="uid://dfsr2f1e5in1w" path="res://Otto/body.png" id="3_4j8yc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xifs"]
+size = Vector2(46, 38)
+
+[node name="Otto" type="CharacterBody2D"]
+script = ExtResource("1_iljk6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6xifs")
+
+[node name="BODY" type="Sprite2D" parent="."]
+texture = ExtResource("2_yk0st")
+
+[node name="RFEET" type="Sprite2D" parent="BODY"]
+texture_filter = 1
+texture = ExtResource("2_yk0st")
+flip_h = true
+
+[node name="LFEET" type="Sprite2D" parent="BODY"]
+texture_filter = 1
+texture = ExtResource("3_4j8yc")

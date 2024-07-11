@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Accelerometer Demo</title>
+
+<style>
+  .indicatorDot{
+    width: 30px;
+    height: 30px;
+    background-color: #ffab56;
+    border-radius: 50%;
+    position:fixed;
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button {
+    text-align: center;
+    height: 3em;
+    font-size: 3em;
+  }
+</style>
+</head>
+<body style="background-color:lightblue;">
+
+<div id="main">
+  <div id="result"></div>
+  <script src="accel.js"></script>
+  <button id="perms" onclick="askPerms()">Pedir permissão para ler o acelerômetros</button>
+</div>
+
+</body>
+</html>

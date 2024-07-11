@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://yfngf133487c"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_2whuf"]
+[ext_resource type="PackedScene" uid="uid://b3qctnlj2onmc" path="res://Otto/otto.tscn" id="1_vaamw"]
+[ext_resource type="Texture2D" uid="uid://becnav78h7eka" path="res://OUTRO/FUNDO.png" id="2_1kbea"]
+[ext_resource type="Texture2D" uid="uid://bsunp01hbmql2" path="res://OUTRO/tapete.png" id="2_t1xur"]
+[ext_resource type="Texture2D" uid="uid://cql0ot6hjy3ik" path="res://joystick.png" id="3_hqhr5"]
+[ext_resource type="Texture2D" uid="uid://bnyavs5a5latn" path="res://position.png" id="4_4vdwl"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_2whuf")
+MAX_ANGLE = 50
+
+[node name="Fundo" type="Sprite2D" parent="."]
+position = Vector2(596, 317)
+scale = Vector2(37.8125, 21.3125)
+texture = ExtResource("2_1kbea")
+
+[node name="Tapete" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(579, 326)
+scale = Vector2(2.6, 2.6)
+texture = ExtResource("2_t1xur")
+
+[node name="Otto" parent="." instance=ExtResource("1_vaamw")]
+position = Vector2(577, 327)
+
+[node name="Joystick" type="Sprite2D" parent="."]
+position = Vector2(86, 543)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_hqhr5")
+
+[node name="Position" type="Sprite2D" parent="Joystick"]
+scale = Vector2(5, 5)
+texture = ExtResource("4_4vdwl")
